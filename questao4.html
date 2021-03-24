@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var matriz = [[1,8,3],[4,2,5] ];
+        provaMatriz()
+        function provaMatriz(){
+            let maiorNumero = 0;
+            let menorNumero = 10;
+            let totalmatriz = 0;
+            let totalNumMatriz = 0;
+            let mediaMatriz = 0;
+
+        for (let i = 0;i < matriz.length;i++){
+            for (let j = 0; j < (matriz.length + 1); j++) {
+            totalmatriz = totalmatriz + matriz[i][j]
+            totalNumMatriz++
+
+            if (matriz[i][j] > maiorNumero){
+                maiorNumero = matriz[i][j]
+                       
+            }
+
+            if (matriz[i][j] < menorNumero){
+                menorNumero = matriz[i][j]
+                       
+            }
+                    
+            }
+        }
+            mediaMatriz = totalmatriz / totalNumMatriz
+            
+            alert(`O maior numero desta matriz é ${maiorNumero}`)
+            alert(`O menor numero desta matriz é ${menorNumero}`)
+            alert(`A média desta matriz é ${mediaMatriz}`)
+
+        }
+    </script>
+</body>
+</html>
